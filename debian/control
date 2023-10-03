@@ -1,0 +1,23 @@
+Source: imgcrypt
+Section: admin
+Priority: optional
+Maintainer: Mentor Embedded <embedded_support@mentor.com>
+Build-Depends: debhelper (>= 11), chrpath, cpio, curl, dh-golang, diffstat, containerd, gawk, golang, golang-go, libseccomp-dev, lz4, pkg-config, wget, zstd, git
+Standards-Version: 4.5.1
+Homepage: https://github.com/containerd/imgcrypt
+Rules-Requires-Root: no
+
+Package: imgcrypt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ca-certificates, containerd, conntrack, iproute2, ipset, iptables, libc6 (>= 2.31), runc, libipset13
+Description: imgcrypt image encryption library and command line tool
+ Project imgcrypt is a non-core subproject of containerd.
+ .
+ The imgcrypt library provides API extensions for containerd to support
+ encrypted container images and implements the ctd-decoder command line tool for
+ use by containerd to decrypt encrypted container images. An extended version of
+ containerd's ctr tool (ctr-enc) with support for encrypting and decrypting
+ container images is also provided.
+ .
+ imgcrypt relies on the ocicrypt library for crypto functions on image layers.
+

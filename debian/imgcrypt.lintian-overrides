@@ -1,0 +1,6 @@
+imgcrypt: description-starts-with-package-name
+imgcrypt: copyright-without-copyright-notice
+imgcrypt: hardening-no-pie bin/ctd-decoder
+imgcrypt: hardening-no-pie bin/ctr-enc
+imgcrypt: no-manual-page bin/ctd-decoder
+imgcrypt: no-manual-page bin/ctr-enc
